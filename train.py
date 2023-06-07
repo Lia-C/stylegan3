@@ -24,6 +24,8 @@ from torch_utils import custom_ops
 
 #----------------------------------------------------------------------------
 
+torch.cuda.empty_cache()
+
 def subprocess_fn(rank, c, temp_dir):
     dnnlib.util.Logger(file_name=os.path.join(c.run_dir, 'log.txt'), file_mode='a', should_flush=True)
 
